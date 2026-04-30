@@ -1,5 +1,5 @@
 function Galeria() {
-    return <h1>Login</h1>
+    return <h1>Galeria</h1>
 }
 
 export default Galeria

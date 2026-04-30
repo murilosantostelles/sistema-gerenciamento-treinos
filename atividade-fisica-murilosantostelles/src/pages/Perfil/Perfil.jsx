@@ -1,5 +1,5 @@
 function Perfil() {
-    return <h1>Login</h1>
+    return <h1>Perfil</h1>
 }
 
 export default Perfil

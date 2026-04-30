@@ -1,5 +1,5 @@
 function Execucoes() {
-    return <h1>Login</h1>
+    return <h1>Execuções</h1>
 }
 
 export default Execucoes

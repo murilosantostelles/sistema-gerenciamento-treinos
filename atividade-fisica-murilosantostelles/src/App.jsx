@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import PrivateRoute from './routes/PrivateRoute'
 import Login from './pages/Login/Login'
 import Cadastro from './pages/Cadastro/Cadastro'
 import Dashboard from './pages/Dashboard/Dashboard'
@@ -8,6 +9,7 @@ import Execucoes from './pages/Execucoes/Execucoes'
 import Galeria from './pages/Galeria/Galeria'
 import Perfil from './pages/Perfil/Perfil'
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -15,12 +17,12 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/perfil" element={<Perfil />} />
-        <Route path="/galeria" element={<Galeria />} />
-        <Route path="/alunos" element={<MeusAlunos />} />
-        <Route path="/alunos/:alunoId/atividades" element={<Atividades />} />
-        <Route path="/execucoes" element={<Execucoes />} />
+        <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
+        <Route path="/perfil" element={<PrivateRoute><Perfil /></PrivateRoute>} />
+        <Route path="/galeria" element={<PrivateRoute><Galeria /></PrivateRoute>} />
+        <Route path="/alunos" element={<PrivateRoute><MeusAlunos /></PrivateRoute>} />
+        <Route path="/alunos/:alunoId/atividades" element={<PrivateRoute><Atividades /></PrivateRoute>} />
+        <Route path="/execucoes" element={<PrivateRoute><Execucoes /></PrivateRoute>} />
       </Routes>
     </BrowserRouter>
   )
