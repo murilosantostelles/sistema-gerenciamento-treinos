@@ -1,0 +1,32 @@
+[
+    {
+        "id": "e1",
+        "alunoId": "u2",
+        "treinoId": "t1",
+        "data": "2026-04-26",
+        "duracaoMinutos": 32,
+        "caloriasGastas": 280,
+        "status": "completo",
+        "observacao": "Me senti bem"
+    },
+    {
+        "id": "e2",
+        "alunoId": "u2",
+        "treinoId": "t2",
+        "data": "2026-04-25",
+        "duracaoMinutos": 45,
+        "caloriasGastas": 190,
+        "status": "completo",
+        "observacao": "Aumentei a carga"
+    },
+    {
+        "id": "e3",
+        "alunoId": "u3",
+        "treinoId": "t3",
+        "data": "2026-04-27",
+        "duracaoMinutos": 40,
+        "caloriasGastas": 220,
+        "status": "completo",
+        "observacao": ""
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "id": "t1",
+        "personalId": "u1",
+        "alunoId": "u2",
+        "tipoExercicio": "Corrida",
+        "descricao": "5km em ritmo moderado",
+        "series": 1,
+        "repeticoes": 5,
+        "observacao": ""
+    },
+    {
+        "id": "t2",
+        "personalId": "u1",
+        "alunoId": "u2",
+        "tipoExercicio": "Musculação - Peito",
+        "descricao": "Supino reto, supino inclinado, crucifixo",
+        "series": 3,
+        "repeticoes": 12,
+        "observacao": "Descanso de 60 segundos entre séries"
+    },
+    {
+        "id": "t3",
+        "personalId": "u1",
+        "alunoId": "u3",
+        "tipoExercicio": "Natação",
+        "descricao": "1000m estilo livre",
+        "series": 1,
+        "repeticoes": 1,
+        "observacao": ""
+    }
+]

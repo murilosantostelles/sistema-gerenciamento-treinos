@@ -1,0 +1,16 @@
+[
+    {
+        "id": "g1",
+        "alunoId": "u2",
+        "data": "2026-04-27",
+        "legenda": "Treino de segunda concluído",
+        "foto": ""
+    },
+    {
+        "id": "g2",
+        "alunoId": "u3",
+        "data": "2026-04-27",
+        "legenda": "Corrida no parque",
+        "foto": ""
+    }
+]

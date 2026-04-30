@@ -1,0 +1,25 @@
+[
+    {
+        "id": "u1",
+        "nome": "Murilo Santos",
+        "email": "murilo@gmail.com",
+        "senha": "123",
+        "tipo": "personal"
+    },
+    {
+        "id": "u2",
+        "nome": "Pedrin Silva",
+        "email": "pedrin@gmail.com",
+        "senha": "123",
+        "tipo": "aluno",
+        "personalId": "u1"
+    },
+    {
+        "id": "u3",
+        "nome": "Maria Silva",
+        "email": "maria@gmail.com",
+        "senha": "123",
+        "tipo": "aluno",
+        "personalId": "u1"
+    }
+]
