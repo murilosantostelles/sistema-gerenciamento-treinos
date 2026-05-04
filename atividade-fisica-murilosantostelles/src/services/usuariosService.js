@@ -1,5 +1,12 @@
 export function getUsuarios() {
-    return JSON.parse(localStorage.getItem('usuarios')) || []
+    const dados = localStorage.getItem('usuarios')
+    if (!dados) return []
+    try {
+        const parsed = JSON.parse(dados)
+        return Array.isArray(parsed) ? parsed : []
+    } catch {
+        return []
+    }
 }
 
 export function getUsuariosPorId(id) {
@@ -12,8 +19,8 @@ export function salvarUsuario(usuario) {
     localStorage.setItem('usuarios', JSON.stringify(atualizados))
 }
 
-export function getPersonais() {
-    return getUsuarios.filter(u => u.tipo === 'personal')
+export function getPersonal() {
+    return getUsuarios().filter(u => u.tipo === 'personal')
 }
 
 export function getAlunosPorPersonal(personalId) {
