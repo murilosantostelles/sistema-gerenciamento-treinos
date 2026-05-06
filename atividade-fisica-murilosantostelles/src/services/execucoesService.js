@@ -7,7 +7,7 @@ export function getExecucoesPorAluno(alunoId) {
 }
 
 export function salvarExecucao(execucao) {
-    const execucoes = getExecucoes
+    const execucoes = getExecucoes()
     const atualizadas = [...execucoes, { ...execucao, id: crypto.randomUUID() }]
     localStorage.setItem('execucoes', JSON.stringify(atualizadas))
 }
