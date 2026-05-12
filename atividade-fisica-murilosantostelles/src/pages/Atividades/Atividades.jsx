@@ -78,19 +78,19 @@ function Atividades() {
                     </button>
                 </div>
 
-                <div className="treinos-grid">
+                <div className="ativ-treinos-grid">
                     {treinos.length === 0 && <p className="vazio">Nenhum treino prescrito ainda.</p>}
                     {treinos.map(treino => (
-                        <div key={treino.id} className="treino-card">
+                        <div key={treino.id} className="ativ-treino-card">
                             <strong>{treino.tipoExercicio}</strong>
                             <p>{treino.descricao}</p>
-                            <p className="treino-series">{treino.series} séries × {treino.repeticoes} repetições</p>
-                            {treino.observacao && <p className="treino-obs">Obs: {treino.observacao}</p>}
-                            <div className="treino-acoes">
-                                <button className="btn-editar" onClick={() => abrirModalEditar(treino)}>
+                            <p className="ativ-treino-series">{treino.series} séries × {treino.repeticoes} repetições</p>
+                            {treino.observacao && <p className="ativ-treino-obs">Obs: {treino.observacao}</p>}
+                            <div className="ativ-treino-acoes">
+                                <button className="ativ-btn-editar" onClick={() => abrirModalEditar(treino)}>
                                     <EditIcon fontSize="small" /> Editar
                                 </button>
-                                <button className="btn-excluir" onClick={() => handleDeletar(treino.id)}>
+                                <button className="ativ-btn-excluir" onClick={() => handleDeletar(treino.id)}>
                                     <DeleteIcon fontSize="small" /> Excluir
                                 </button>
                             </div>
@@ -100,36 +100,36 @@ function Atividades() {
             </div>
 
             {modalAberto && (
-                <div className="modal-overlay" onClick={fecharModal}>
-                    <div className="modal" onClick={e => e.stopPropagation()}>
+                <div className="ativ-modal-overlay" onClick={fecharModal}>
+                    <div className="ativ-modal" onClick={e => e.stopPropagation()}>
                         <h2>{treinoEditando ? 'Editar Treino' : 'Prescrever Novo Treino'}</h2>
 
-                        <div className="modal-campo">
+                        <div className="ativ-modal-campo">
                             <label>Tipo de exercício</label>
                             <input type="text" placeholder="Ex: Corrida, Musculação..." value={form.tipoExercicio} onChange={e => setForm({ ...form, tipoExercicio: e.target.value })} />
                         </div>
-                        <div className="modal-campo">
+                        <div className="ativ-modal-campo">
                             <label>Descrição</label>
                             <textarea placeholder="Descreva o treino..." value={form.descricao} onChange={e => setForm({ ...form, descricao: e.target.value })} />
                         </div>
-                        <div className="modal-duplo">
-                            <div className="modal-campo">
+                        <div className="ativ-modal-duplo">
+                            <div className="ativ-modal-campo">
                                 <label>Séries</label>
                                 <input type="number" placeholder="3" value={form.series} onChange={e => setForm({ ...form, series: e.target.value })} />
                             </div>
-                            <div className="modal-campo">
+                            <div className="ativ-modal-campo">
                                 <label>Repetições</label>
                                 <input type="number" placeholder="12" value={form.repeticoes} onChange={e => setForm({ ...form, repeticoes: e.target.value })} />
                             </div>
                         </div>
-                        <div className="modal-campo">
+                        <div className="ativ-modal-campo">
                             <label>Observações</label>
                             <textarea placeholder="Dicas ou observações adicionais..." value={form.observacao} onChange={e => setForm({ ...form, observacao: e.target.value })} />
                         </div>
 
-                        <div className="modal-acoes">
-                            <button className="btn-cancelar" onClick={fecharModal}>Cancelar</button>
-                            <button className="btn-salvar" onClick={handleSalvar}>{treinoEditando ? 'Atualizar' : 'Salvar'}</button>
+                        <div className="ativ-modal-acoes">
+                            <button className="ativ-btn-cancelar" onClick={fecharModal}>Cancelar</button>
+                            <button className="ativ-btn-salvar" onClick={handleSalvar}>{treinoEditando ? 'Atualizar' : 'Salvar'}</button>
                         </div>
                     </div>
                 </div>
